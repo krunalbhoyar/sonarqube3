@@ -1,6 +1,6 @@
 node{
     stage ('cloning the code from git') {
-        git 'https://gitlab.com/krunalbhoyar/sonarqube.git'
+        git 'https://github.com/krunalbhoyar/sonarqube3.git'
     }
 
     stage ('sonarqube analysis') {
