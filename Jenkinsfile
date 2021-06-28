@@ -12,7 +12,9 @@ node{
 	    //sh 'echo "=================Running Test Cases=================="'
 	    //sh 'npx jest --coverage'
             sh 'echo "==============Scanning code coverage================="'
-            sh 'npm run sonar'    
+            withSonarQubeEnv("sonarqube") {
+             sh "${tool("sonarqube")}/bin/sonar-scanner"   
     
     }
+}
 }
